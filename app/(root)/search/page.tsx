@@ -1,5 +1,5 @@
 import ProfileHeader from "@/components/shared/ProfileHeader";
-import { fetchAllUsers, fetchUser } from "@/lib/actions/user.actions";
+import { fetchUsers, fetchUser } from "@/lib/actions/user.actions";
 import { currentUser } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 import { profileTabs } from "@/constants";
@@ -14,7 +14,7 @@ async function Page() {
   if (!userInfo?.onboarded) redirect("/onboarding");
 
   //fetch users.
-  const result = await fetchAllUsers({
+  const result = await fetchUsers({
     userId: user.id,
     searchString: "",
     pageNumber: 1,
