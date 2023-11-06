@@ -1,6 +1,5 @@
 import ProfileHeader from "@/components/shared/ProfileHeader";
 import {
-  fetchAllUsers,
   fetchUser,
   getActivity,
 } from "@/lib/actions/user.actions";

@@ -9,8 +9,9 @@ interface Props {
   username: string;
   imgUrl: string;
   personType: string;
+  mainPage?: boolean;
 }
-function UserCard({ id, name, username, imgUrl, personType }: Props) {
+function UserCard({ id, name, username, imgUrl, personType, mainPage }: Props) {
   const router = useRouter();
   return (
     <article className="user-card">
@@ -28,7 +29,7 @@ function UserCard({ id, name, username, imgUrl, personType }: Props) {
         </div>
       </div>
       <Button
-        className="user-card_btn"
+        className={`${mainPage ? 'hidden' : "user-card_btn"}`}
         onClick={() => router.push(`/profile/${id}`)}
       >
         View

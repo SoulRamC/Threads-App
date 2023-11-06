@@ -12,11 +12,22 @@ interface Props {
   members: {
     image: string;
   }[];
+  mainpage?: boolean;
 }
 
-function CommunityCard({ id, name, username, imgUrl, bio, members }: Props) {
+function CommunityCard({
+  id,
+  name,
+  username,
+  imgUrl,
+  bio,
+  members,
+  mainpage,
+}: Props) {
   return (
-    <article className="community-card">
+    <article
+      className={`${mainpage ? "community-card w-72" : "community-card"}`}
+    >
       <div className="flex flex-wrap items-center gap-3">
         <Link href={`/communities/${id}`} className="relative h-12 w-12">
           <Image
@@ -35,9 +46,21 @@ function CommunityCard({ id, name, username, imgUrl, bio, members }: Props) {
         </div>
       </div>
 
-      <p className="mt-4 text-subtle-medium text-gray-1">{bio}</p>
+      <p
+        className={`${
+          mainpage ? "hidden" : "mt-4 text-subtle-medium text-gray-1"
+        }`}
+      >
+        {bio}
+      </p>
 
-      <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
+      <div
+        className={`${
+          mainpage
+            ? "hidden"
+            : "mt-5 flex flex-wrap items-center justify-between gap-3"
+        }`}
+      >
         <Link href={`/communities/${id}`}>
           <Button size="sm" className="community-card_btn">
             View
@@ -45,7 +68,7 @@ function CommunityCard({ id, name, username, imgUrl, bio, members }: Props) {
         </Link>
 
         {members.length > 0 && (
-          <div className="flex items-center">
+          <div className={`${mainpage ? "hidden" : "flex items-center"}`}>
             {members.map((member, index) => (
               <Image
                 key={index}
