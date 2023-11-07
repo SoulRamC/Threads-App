@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { BiEdit } from "react-icons/bi";
 
 interface Props {
   accountId: string;
@@ -39,6 +41,12 @@ const ProfileHeader = ({
               @{username}
             </p>
           </div>
+          <Link
+            href={`/profileEdit`}
+            className="text-primary-500 hover:text-indigo-300 transition-all ease-in"
+          >
+            <BiEdit size="21"></BiEdit>
+          </Link>
         </div>
       </div>
       {/* TODO: Community  */}

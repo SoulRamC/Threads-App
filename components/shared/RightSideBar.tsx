@@ -19,7 +19,7 @@ async function RightSideBar() {
     userId: user.id,
     searchString: "",
     pageNumber: 1,
-    pageSize: 25,
+    pageSize: 5,
   });
   return (
     <section className="custom-scrollbar rightsidebar">
@@ -43,19 +43,21 @@ async function RightSideBar() {
         </div>
       </div>
       <div className="flex flex-1 flex-col justify-start">
-        <h3 className="text-heading4-medium text-light-1 pb-3">Suggested Users</h3>
+        <h3 className="text-heading4-medium text-light-1 pb-3">
+          Suggested Users
+        </h3>
         <div className="flex flex-1 flex-col gap-3">
-        {resultUsers.users.map((person) => (
-              <UserCard
-                key={person.id}
-                id={person.id}
-                name={person.name}
-                username={person.username}
-                imgUrl={person.image}
-                personType="User"
-                mainPage={true}
-              />
-            ))}
+          {resultUsers.users.map((person) => (
+            <UserCard
+              key={person.id}
+              id={person.id}
+              name={person.name}
+              username={person.username}
+              imgUrl={person.image}
+              personType="User"
+              mainPage={true}
+            />
+          ))}
         </div>
       </div>
     </section>
