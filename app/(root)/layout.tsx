@@ -1,4 +1,4 @@
-import '../globals.css'
+import "../globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -10,8 +10,8 @@ import Buttombar from "@/components/shared/Buttombar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Threads",
-  description: "A nextjs 13 Meta Threads Application",
+  title: "SSpeech",
+  description: "A social media application made using Nextjs 13",
 };
 
 export default function RootLayout({

@@ -4,8 +4,8 @@ import { Inter } from "next/font/google";
 import "../globals.css";
 
 export const metadata = {
-  title: "Threads",
-  description: "A Next.Js 13 Meta Threads Application",
+  title: "SSpeech",
+  description: "A social media application made using Nextjs 13",
 };
 
 const inter = Inter({ subsets: ["latin"] });
