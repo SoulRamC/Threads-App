@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import "../globals.css";
 
 export const metadata = {
-  title: "SSpeech",
+  title: "Threads",
   description: "A social media application made using Nextjs 13",
 };
 

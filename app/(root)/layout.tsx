@@ -8,9 +8,8 @@ import RightSideBar from "@/components/shared/RightSideBar";
 import Buttombar from "@/components/shared/Buttombar";
 
 const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "SSpeech",
+  title: "Threads",
   description: "A social media application made using Nextjs 13",
 };
 
@@ -25,7 +24,7 @@ export default function RootLayout({
         <head>
           <link rel="icon" href="/favicon.ico" />
         </head>
-        <body className={inter.className}>
+        <body className={`${inter.className} font-poppins`}>
           <Topbar></Topbar>
           <main className="flex flex-row">
             <LeftSidebar></LeftSidebar>

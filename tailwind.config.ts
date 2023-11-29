@@ -15,6 +15,9 @@ const config: Config = {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      poppins: ["Poppins"],
+    },
     fontSize: {
       "heading1-bold": [
         "36px",
